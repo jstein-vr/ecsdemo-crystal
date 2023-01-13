@@ -20,6 +20,8 @@ spec:
       labels:
         app: ecsdemo-crystal
     spec:
+      nodeSelector:
+        eks.amazonaws.com/nodegroup: api-server
       containers:
       - image: brentley/ecsdemo-crystal:latest
         imagePullPolicy: Always
